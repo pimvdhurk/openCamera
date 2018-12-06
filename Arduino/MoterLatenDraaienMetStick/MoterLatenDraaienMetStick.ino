@@ -16,8 +16,35 @@ void setup() {
   Serial.begin(9600);
 }
 
-void loop() {
+void loop() 
+{
   double newAnalog = analogRead(sensePin);
   Serial.println(newAnalog);
   newAnalog = newAnalog / 1023;
   newAnalog = newAnalog * 100;
+
+
+   if(newAnalog < 50 && isUp == false)
+   {
+    int count = angleMin;
+      while(count < angleMax)
+      {
+        servo.write(count);
+        count = count + 1;
+        delay(10);
+        isUp = true;
+     }
+   }
+
+   if(newAnalog > 50 && isUp == true)
+   {
+    int count = angleMax;
+      while(count > angleMin)
+      {
+        servo.write(count);
+        count = count - 1;
+        delay(10);
+        isUp = false;
+     }
+   }
+}
