@@ -4,11 +4,36 @@ body {
 	background-size: cover;
 	background-position: center top;
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
 .cover {
 	width: 100%;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, 0.5);
 
+}
+
+.knoppen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 200px;
+	background-color: #1b448c;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+}
+
+.knopVijftig {
+	float: left;
+	width: 98px;
+	height: 50px;
+/*	border: 1px black solid;*/
+	cursor: pointer;
+}
+
+.knopVijftig:hover {
+	background-color: #349aff;
 }
