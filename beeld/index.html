@@ -10,12 +10,20 @@
 </head>
 <body>
 
-	<div class="cover"></div>
+	<div class="cover" id="blackCover"></div>
+	<div class="cover" id="halfCover"></div>
+	<div class="cover" id="noCover"></div>
+
+
 
 	<div class="knoppen">
-		<div class="knopVijftig" id="plusKnop">- 50%</div>
-		<div class="knopVijftig" id="minKnop">+ 50%</div>
+
+		<div class="knopVijftig" id="minKnop" onclick="lichter()">- 50%</div>
+
+		<div class="knopVijftig" id="plusKnop" onclick="donkerder()">+ 50%</div>
+
 	</div>
 
+<script src="opacity.js"></script>
 </body>
 </html>
