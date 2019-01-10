@@ -12,3 +12,8 @@ In dit project maken we een levensgrote spiegelreflexcamera. Door de onderdelen 
 De spiegels in een spiegelreflexcamera zorgen ervoor dat het licht via de lens naar de zoeker (kijkgat) wordt geleid. Hierdoor kan de gebruiker precies zien wat de camera ziet.
 
 ![spiegels](https://user-images.githubusercontent.com/33573000/49583695-459b2080-f959-11e8-865c-3fe6719854e3.png)
+
+De spiegels zullen worden gedraaid door middel van arduino's. Het ontwerp van de arduino's zal er als volgt uitzien:
+
+![arduinodesignnamed](https://user-images.githubusercontent.com/33573000/50962494-a96db780-14ca-11e9-812e-35cfd3e9116f.png)
+
