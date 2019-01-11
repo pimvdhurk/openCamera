@@ -1,22 +1,22 @@
-import processing.serial.*;
+#include <Servo.h> //accesses the Arduino Servo Library
 
-Serial port;
+Servo myservo;  // creates servo object to control a servo
 
-int data;
+int val;    // variable to read the value from the analog pin
 
-void setup() {
-  
-   size(500, 500);
-   port = new Serial(this, Serial.list()[0], 9600);
-   
+void setup()
+{
+  myservo.attach(9);  // ensures output to servo on pin 8
+  Serial.begin(9600); // processing
 }
 
-void draw() {
+void loop() 
+{ 
+  val = analogRead(1);            // reads the value of the potentiometer from A1 (value between 0 and 1023) 
+  val = map(val, 0, 1023, 0, 180);     // converts reading from potentiometer to an output value in degrees of rotation that the servo can understand 
+  myservo.write(val);                  // sets the servo position according to the input from the potentiometer 
+  delay(15);                           // waits 15ms for the servo to get to set position  
 
-  if (port.available() > 0) {
-  data = port.read();
-  }
-  
-  background(100, 0, data);
-  
+  Serial.write(map(analogRead(5), 0, 1023, 0, 255)); // processing
+  delay(20); // processing
 }
