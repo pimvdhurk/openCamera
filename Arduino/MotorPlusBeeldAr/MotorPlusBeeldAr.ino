@@ -19,4 +19,4 @@ void loop()
 
   Serial.write(map(analogRead(5), 0, 1023, 0, 255)); // processing
   delay(20); // processing
-}
+} 

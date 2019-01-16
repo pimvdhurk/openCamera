@@ -7,7 +7,7 @@ int data;
 void setup() {
   
    // size of the pop up screen
-   size(1200, 1000);
+   size(1000, 600);
    
    // connection from computer to arduino
    port = new Serial(this, Serial.list()[0], 9600);
@@ -21,11 +21,10 @@ void draw() {
     
   // reads data from the port
   data = port.read();
-
   }
   
   // when the data changes, the background changes too
   background(data, data, data);
-  delay(10);
+  println(data);
   
 }
